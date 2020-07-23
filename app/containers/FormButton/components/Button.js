@@ -1,45 +1,4 @@
 
-            // Button
-
-
-// import React from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
-// // import Button from '@material-ui/core/Button';
-// import Checkbox from '@material-ui/core/Checkbox';
-
-
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     '& > *': {
-//       margin: theme.spacing(1),
-//     },
-//   },
-// }));
-
-// export default function ContainedButtons() {
-//   const classes = useStyles();
-
-//   return (
-//     <div className={classes.root}>
-//       <Button variant="contained">Default</Button>
-//       <Button variant="contained" color="primary">
-//         Primary
-//       </Button>
-//       <Button variant="contained" color="secondary">
-//         Secondary
-//       </Button>
-//       <Button variant="contained" disabled>
-//         Disabled
-//       </Button>
-//       <Button variant="contained" color="primary" href="#contained-buttons">
-//         Link
-//       </Button>
-//     </div>
-//   );
-// }
-
-
-
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -126,8 +85,9 @@ export default function SignIn() {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className={classes.form} noValidate>
-          <TextField
+        <form className={classes.form} Validate>
+          <TextField Input label="Your email" group type="text" validate error="wrong"
+            success="right"  
             variant="outlined"
             margin="normal"
             required
@@ -136,10 +96,11 @@ export default function SignIn() {
             label="Email Address"
             name="email"
             placeholder="Email"
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-         
-            // helperText="Incorrect entry."
-            // autoComplete="email"
+            
+            // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            
+             helperText="Incorrect entry."
+            autoComplete="email"
             autoFocus
           />
           <TextField
@@ -189,7 +150,6 @@ export default function SignIn() {
     </Container>
   );
 }
-
 
 
 
